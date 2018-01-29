@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9Ne-hy-xY9">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="3rC-S5-vY8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9Ne-hy-xY9" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="emF-8U-CBm">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.29013949632644653" green="0.20798039436340332" blue="0.47848069667816162" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="PnG-zi-nYD" kind="relationship" relationship="rootViewController" id="yUc-nT-y7z"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZIr-CU-9zQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-874" y="161"/>
+        </scene>
+        <!--Top Games-->
+        <scene sceneID="T31-OP-TNL">
+            <objects>
+                <viewController id="PnG-zi-nYD" customClass="ListGamesViewController" customModule="top_games" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ST8-ii-Ppp" customClass="ListGamesView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Zh-2b-eKf">
+                                <rect key="frame" x="0.0" y="510" width="375" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="QPx-xB-Q0c"/>
+                                </constraints>
+                                <items>
+                                    <tabBarItem title="Top Games" image="Twitchgames" selectedImage="Twitchgames" id="YTC-ZT-R24"/>
+                                    <tabBarItem systemItem="favorites" id="5io-ak-KRS"/>
+                                </items>
+                            </tabBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5Zh-2b-eKf" firstAttribute="trailing" secondItem="SwI-TB-9pG" secondAttribute="trailing" id="5K6-8i-a9K"/>
+                            <constraint firstItem="5Zh-2b-eKf" firstAttribute="leading" secondItem="SwI-TB-9pG" secondAttribute="leading" id="iJn-4m-iAd"/>
+                            <constraint firstItem="5Zh-2b-eKf" firstAttribute="bottom" secondItem="SwI-TB-9pG" secondAttribute="bottom" id="yrW-R2-PAw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SwI-TB-9pG"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Top Games" id="2rr-vV-zMC"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7NK-Kd-DTi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-346" y="154"/>
+        </scene>
+        <!--Game Detail View Controller-->
+        <scene sceneID="YUN-h4-Og0">
+            <objects>
+                <viewController id="mbe-wF-6Wu" customClass="GameDetailViewController" customModule="top_games" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nlq-oz-9sZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="847-Gj-lKf"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JSh-PX-1wO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="195" y="154"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Twitchgames" width="25" height="25"/>
+    </resources>
+</document>
