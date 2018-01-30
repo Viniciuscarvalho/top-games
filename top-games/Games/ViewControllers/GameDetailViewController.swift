@@ -1,17 +1,24 @@
 import UIKit
 
 class GameDetailViewController: UIViewController {
-
-    private lazy var refreshControl: UIRefreshControl = {
-        let refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: #selector(saveTopGames),
-                                 for: .valueChanged)
-        return refreshControl
-    }()
+    
+    @IBOutlet private weak var gameDetailView: GameDetailView! {
+        didSet {
+            gameDetailView.setup(game: game, image: cover)
+        }
+    }
+    
+    private var game: Game!
+    private var cover: UIImage!
+    
+    func setup(game: Game, cover: UIImage?) {
+        self.game = game
+        self.cover = cover
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        title = game.name
     }
 
 }

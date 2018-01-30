@@ -1,1 +1,3 @@
-import Foundation
+protocol GamesGateway {
+    func allGames() -> Resource<[Game]>
+}

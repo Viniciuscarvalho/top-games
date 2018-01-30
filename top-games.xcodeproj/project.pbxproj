@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA5D2056201FF37100A7541A /* GamesRestAPIGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5D2055201FF37100A7541A /* GamesRestAPIGateway.swift */; };
+		EA5D2058201FFA6800A7541A /* LoadImageRestAPIGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5D2057201FFA6800A7541A /* LoadImageRestAPIGateway.swift */; };
+		EA5D205A201FFA9700A7541A /* LoadImageGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5D2059201FFA9700A7541A /* LoadImageGateway.swift */; };
+		EA5D205C201FFB7600A7541A /* LoadImageRestAPIGatewayError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5D205B201FFB7600A7541A /* LoadImageRestAPIGatewayError.swift */; };
+		EA5D205F201FFCBF00A7541A /* ListGamesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5D205E201FFCBF00A7541A /* ListGamesUseCase.swift */; };
 		EA6710DF201BE9C000A1DA12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6710DE201BE9C000A1DA12 /* AppDelegate.swift */; };
 		EA6710E4201BE9C000A1DA12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA6710E2201BE9C000A1DA12 /* Main.storyboard */; };
 		EA6710E7201BE9C000A1DA12 /* top_games.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA6710E5201BE9C000A1DA12 /* top_games.xcdatamodeld */; };
@@ -14,7 +19,6 @@
 		EA6710EC201BE9C000A1DA12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA6710EA201BE9C000A1DA12 /* LaunchScreen.storyboard */; };
 		EA6710F7201BE9C000A1DA12 /* top_gamesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6710F6201BE9C000A1DA12 /* top_gamesTests.swift */; };
 		EA671109201BF4B500A1DA12 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA671108201BF4B500A1DA12 /* Resource.swift */; };
-		EA67110B201BF4C600A1DA12 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA67110A201BF4C600A1DA12 /* WebService.swift */; };
 		EA671117201C026A00A1DA12 /* GameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA671115201C026A00A1DA12 /* GameCollectionViewCell.swift */; };
 		EA671118201C026A00A1DA12 /* GameCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA671116201C026A00A1DA12 /* GameCollectionViewCell.xib */; };
 		EA67111A201C060200A1DA12 /* GameDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA671119201C060200A1DA12 /* GameDetailView.swift */; };
@@ -56,6 +60,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EA5D2055201FF37100A7541A /* GamesRestAPIGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesRestAPIGateway.swift; sourceTree = "<group>"; };
+		EA5D2057201FFA6800A7541A /* LoadImageRestAPIGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImageRestAPIGateway.swift; sourceTree = "<group>"; };
+		EA5D2059201FFA9700A7541A /* LoadImageGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImageGateway.swift; sourceTree = "<group>"; };
+		EA5D205B201FFB7600A7541A /* LoadImageRestAPIGatewayError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImageRestAPIGatewayError.swift; sourceTree = "<group>"; };
+		EA5D205E201FFCBF00A7541A /* ListGamesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListGamesUseCase.swift; sourceTree = "<group>"; };
 		EA6710DB201BE9C000A1DA12 /* top-games.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "top-games.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA6710DE201BE9C000A1DA12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA6710E3201BE9C000A1DA12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -67,7 +76,6 @@
 		EA6710F6201BE9C000A1DA12 /* top_gamesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = top_gamesTests.swift; sourceTree = "<group>"; };
 		EA6710F8201BE9C000A1DA12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA671108201BF4B500A1DA12 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
-		EA67110A201BF4C600A1DA12 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		EA671115201C026A00A1DA12 /* GameCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCollectionViewCell.swift; sourceTree = "<group>"; };
 		EA671116201C026A00A1DA12 /* GameCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameCollectionViewCell.xib; sourceTree = "<group>"; };
 		EA671119201C060200A1DA12 /* GameDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailView.swift; sourceTree = "<group>"; };
@@ -116,6 +124,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA5D205D201FFC0700A7541A /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				EA5D205E201FFCBF00A7541A /* ListGamesUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
 		EA6710D2201BE9C000A1DA12 = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +193,7 @@
 		EA671103201BED7400A1DA12 /* Games */ = {
 			isa = PBXGroup;
 			children = (
+				EA5D205D201FFC0700A7541A /* UseCases */,
 				EA671128201D273E00A1DA12 /* Factories */,
 				EA671121201D249000A1DA12 /* Interactor */,
 				EA67110E201BF94E00A1DA12 /* Datasource & Delegate */,
@@ -213,7 +230,6 @@
 			isa = PBXGroup;
 			children = (
 				EA671108201BF4B500A1DA12 /* Resource.swift */,
-				EA67110A201BF4C600A1DA12 /* WebService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -231,6 +247,9 @@
 			isa = PBXGroup;
 			children = (
 				EA671124201D271C00A1DA12 /* GamesGateway.swift */,
+				EA5D2055201FF37100A7541A /* GamesRestAPIGateway.swift */,
+				EA5D2057201FFA6800A7541A /* LoadImageRestAPIGateway.swift */,
+				EA5D2059201FFA9700A7541A /* LoadImageGateway.swift */,
 			);
 			path = Gateways;
 			sourceTree = "<group>";
@@ -285,6 +304,7 @@
 			children = (
 				EA671137201E5E7E00A1DA12 /* TopGamesError.swift */,
 				EA671139201E5EBE00A1DA12 /* ImageCacheError.swift */,
+				EA5D205B201FFB7600A7541A /* LoadImageRestAPIGatewayError.swift */,
 			);
 			path = Errors;
 			sourceTree = "<group>";
@@ -439,8 +459,12 @@
 				EA671136201E1B8000A1DA12 /* Result.swift in Sources */,
 				EA67112E201E126F00A1DA12 /* ListGamesViewController.swift in Sources */,
 				EA671134201E1B6000A1DA12 /* NibLoadable.swift in Sources */,
+				EA5D205C201FFB7600A7541A /* LoadImageRestAPIGatewayError.swift in Sources */,
+				EA5D205F201FFCBF00A7541A /* ListGamesUseCase.swift in Sources */,
 				EA67113E201E62E800A1DA12 /* SaveGamesPresenter.swift in Sources */,
 				EA67112C201E124F00A1DA12 /* GameDetailViewController.swift in Sources */,
+				EA5D2056201FF37100A7541A /* GamesRestAPIGateway.swift in Sources */,
+				EA5D205A201FFA9700A7541A /* LoadImageGateway.swift in Sources */,
 				EA67114A201E69D000A1DA12 /* CGFloat+Constant.swift in Sources */,
 				EA671109201BF4B500A1DA12 /* Resource.swift in Sources */,
 				EA671138201E5E7E00A1DA12 /* TopGamesError.swift in Sources */,
@@ -451,8 +475,8 @@
 				EA671148201E65CD00A1DA12 /* String+Constant.swift in Sources */,
 				EA67112A201D275000A1DA12 /* ListGamesFactory.swift in Sources */,
 				EA671150201E6D8A00A1DA12 /* CoreDataStack.swift in Sources */,
-				EA67110B201BF4C600A1DA12 /* WebService.swift in Sources */,
 				EA67111E201D147100A1DA12 /* GamesEntity.swift in Sources */,
+				EA5D2058201FFA6800A7541A /* LoadImageRestAPIGateway.swift in Sources */,
 				EA67113C201E629E00A1DA12 /* LoadImagePresenter.swift in Sources */,
 				EA671143201E64F300A1DA12 /* UIStoryboard+Main.swift in Sources */,
 				EA671141201E64A100A1DA12 /* Int32+ToInt.swift in Sources */,
