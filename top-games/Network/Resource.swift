@@ -39,5 +39,18 @@ class Resource<T> {
             }
         }
     }
+    
+    func flatMap<B>(_ transform: @escaping (T) -> Resource<B>) -> Resource<B> {
+        return Resource<B> { completion in
+            self.onResult { result in
+                switch result {
+                case .success(let value):
+                    transform(value).onResult(completion)
+                case .fail(let error):
+                    completion(Result.fail(error))
+                }
+            }
+        }
+    }
 }
 
