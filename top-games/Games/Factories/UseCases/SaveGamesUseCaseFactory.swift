@@ -6,6 +6,6 @@ struct SaveGamesUseCaseFactory {
         let cleanGamesGateway = CleanGamesCoreDataGatewayFactory.make()
         
         return SaveGamesUseCase(saveGamesGateway: saveGamesGateway, gamesGateway: gamesGateway,
-                                saveGamesPresenter: saveGamesPresenter, cleanGamesGateway: cleanGamesGateway)
+                                cleanGamesGateway: cleanGamesGateway, saveGamesPresenter: saveGamesPresenter)
     }
 }

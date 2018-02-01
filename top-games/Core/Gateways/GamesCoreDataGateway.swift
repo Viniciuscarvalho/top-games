@@ -22,7 +22,7 @@ struct GamesCoreDataGateway: GamesGateway {
     }
     
     private func generateEntity(game: GameEntityCoreData) -> Game {
-        return GameEntity(id: game.id.int,
+        return GamesEntity(id: game.id.int,
                           coverUrl: game.coverUrl ?? String.empty,
                           name: game.name ?? String.empty,
                           popularity: game.popularity.int,

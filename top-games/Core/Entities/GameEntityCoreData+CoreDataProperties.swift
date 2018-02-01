@@ -2,6 +2,7 @@ import Foundation
 import CoreData
 
 extension GameEntityCoreData {
+    
     @nonobjc public class func fetchRequest() -> NSFetchRequest<GameEntityCoreData> {
         return NSFetchRequest<GameEntityCoreData>(entityName: "GameEntityCoreData")
     }
@@ -11,5 +12,4 @@ extension GameEntityCoreData {
     @NSManaged public var name: String?
     @NSManaged public var popularity: Int32
     @NSManaged public var viewers: Int32
-    
 }
