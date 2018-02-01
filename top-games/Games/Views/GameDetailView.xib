@@ -10,7 +10,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameDetailView" customModule="top_games" customModuleProvider="target">
+            <connections>
+                <outlet property="coverImageView" destination="E8t-sU-h2B" id="A3h-F0-qJJ"/>
+                <outlet property="nameLabel" destination="MMD-yK-gXu" id="fjR-Tb-aAn"/>
+                <outlet property="popularityLabel" destination="kAG-VY-hyZ" id="xmF-3n-GDO"/>
+                <outlet property="viewersLabel" destination="fTx-7C-IEH" id="eg6-94-but"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="DDW-F9-Zjn">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>

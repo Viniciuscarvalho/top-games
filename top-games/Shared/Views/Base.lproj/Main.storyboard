@@ -69,17 +69,32 @@
         <!--Game Detail View Controller-->
         <scene sceneID="YUN-h4-Og0">
             <objects>
-                <viewController id="mbe-wF-6Wu" customClass="GameDetailViewController" customModule="top_games" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GameDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mbe-wF-6Wu" customClass="GameDetailViewController" customModule="top_games" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nlq-oz-9sZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pEV-SA-o5Q" customClass="GameDetailView" customModule="top_games" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pEV-SA-o5Q" firstAttribute="bottom" secondItem="847-Gj-lKf" secondAttribute="bottom" id="1eg-rU-YKn"/>
+                            <constraint firstItem="pEV-SA-o5Q" firstAttribute="leading" secondItem="847-Gj-lKf" secondAttribute="leading" id="Mm5-bh-BRm"/>
+                            <constraint firstItem="pEV-SA-o5Q" firstAttribute="trailing" secondItem="847-Gj-lKf" secondAttribute="trailing" id="RLk-PO-bJU"/>
+                            <constraint firstItem="pEV-SA-o5Q" firstAttribute="top" secondItem="Nlq-oz-9sZ" secondAttribute="top" id="VbY-5C-eJJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="847-Gj-lKf"/>
                     </view>
+                    <connections>
+                        <outlet property="gameDetailView" destination="pEV-SA-o5Q" id="b3t-h6-xZE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JSh-PX-1wO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="494" y="161"/>
+            <point key="canvasLocation" x="493.60000000000002" y="160.56971514242881"/>
         </scene>
     </scenes>
     <resources>
