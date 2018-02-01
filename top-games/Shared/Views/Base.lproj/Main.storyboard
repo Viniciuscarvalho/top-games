@@ -31,7 +31,7 @@
         <scene sceneID="T31-OP-TNL">
             <objects>
                 <viewController id="PnG-zi-nYD" customClass="ListGamesViewController" customModule="top_games" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ST8-ii-Ppp" customClass="ListGamesView">
+                    <view key="view" contentMode="scaleToFill" id="ST8-ii-Ppp" customClass="ListGamesView" customModule="top_games" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -58,10 +58,13 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Top Games" id="2rr-vV-zMC"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="listGamesView" destination="ST8-ii-Ppp" id="QcV-b3-keo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7NK-Kd-DTi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-346" y="154"/>
+            <point key="canvasLocation" x="-177" y="161"/>
         </scene>
         <!--Game Detail View Controller-->
         <scene sceneID="YUN-h4-Og0">
@@ -76,7 +79,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JSh-PX-1wO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="195" y="154"/>
+            <point key="canvasLocation" x="494" y="161"/>
         </scene>
     </scenes>
     <resources>

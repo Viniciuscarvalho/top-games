@@ -15,8 +15,8 @@ extension String {
     }
     
     struct Identifier {
-        static let gamesCollection = ""
-        static let gameDetailViewController = ""
+        static let gamesCollection = "GamesCollectionViewCellIdentifier"
+        static let gameDetailViewController = "GameDetailViewController"
     }
     
     struct Storyboard {
