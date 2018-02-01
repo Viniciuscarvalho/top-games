@@ -1,7 +1,6 @@
 import Foundation
 import CoreData
 
-@objc (GameEntityCoreData)
+@objc(GameEntityCoreData)
 public class GameEntityCoreData: NSManagedObject {
-    
 }

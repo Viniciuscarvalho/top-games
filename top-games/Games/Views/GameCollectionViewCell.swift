@@ -5,6 +5,7 @@ class GameCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var nameBackgroundView: UIView!
     @IBOutlet private weak var coverImageView: UIImageView!
+    @IBOutlet weak var favoriteImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
