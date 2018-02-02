@@ -38,12 +38,12 @@
 		EA5D207720229CCA00A7541A /* GamesCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5D207620229CCA00A7541A /* GamesCollectionViewDataSource.swift */; };
 		EA5D207D2022A74700A7541A /* GamesCoreDataGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5D207C2022A74700A7541A /* GamesCoreDataGateway.swift */; };
 		EA5D207F2023EFFA00A7541A /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5D207E2023EFFA00A7541A /* MainNavigationController.swift */; };
+		EA5D20832023F8C900A7541A /* ListGamesSuccess.json in Resources */ = {isa = PBXBuildFile; fileRef = EA5D20822023F8C900A7541A /* ListGamesSuccess.json */; };
 		EA6710DF201BE9C000A1DA12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6710DE201BE9C000A1DA12 /* AppDelegate.swift */; };
 		EA6710E4201BE9C000A1DA12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA6710E2201BE9C000A1DA12 /* Main.storyboard */; };
 		EA6710E7201BE9C000A1DA12 /* top_games.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA6710E5201BE9C000A1DA12 /* top_games.xcdatamodeld */; };
 		EA6710E9201BE9C000A1DA12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA6710E8201BE9C000A1DA12 /* Assets.xcassets */; };
 		EA6710EC201BE9C000A1DA12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA6710EA201BE9C000A1DA12 /* LaunchScreen.storyboard */; };
-		EA6710F7201BE9C000A1DA12 /* top_gamesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6710F6201BE9C000A1DA12 /* top_gamesTests.swift */; };
 		EA671109201BF4B500A1DA12 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA671108201BF4B500A1DA12 /* Resource.swift */; };
 		EA671117201C026A00A1DA12 /* GameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA671115201C026A00A1DA12 /* GameCollectionViewCell.swift */; };
 		EA671118201C026A00A1DA12 /* GameCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA671116201C026A00A1DA12 /* GameCollectionViewCell.xib */; };
@@ -115,6 +115,7 @@
 		EA5D207620229CCA00A7541A /* GamesCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		EA5D207C2022A74700A7541A /* GamesCoreDataGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesCoreDataGateway.swift; sourceTree = "<group>"; };
 		EA5D207E2023EFFA00A7541A /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		EA5D20822023F8C900A7541A /* ListGamesSuccess.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ListGamesSuccess.json; sourceTree = "<group>"; };
 		EA6710DB201BE9C000A1DA12 /* top-games.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "top-games.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA6710DE201BE9C000A1DA12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA6710E3201BE9C000A1DA12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -123,7 +124,6 @@
 		EA6710EB201BE9C000A1DA12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA6710ED201BE9C000A1DA12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA6710F2201BE9C000A1DA12 /* top-gamesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "top-gamesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA6710F6201BE9C000A1DA12 /* top_gamesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = top_gamesTests.swift; sourceTree = "<group>"; };
 		EA6710F8201BE9C000A1DA12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA671108201BF4B500A1DA12 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		EA671115201C026A00A1DA12 /* GameCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -234,6 +234,22 @@
 			path = Gateways;
 			sourceTree = "<group>";
 		};
+		EA5D20802023F89200A7541A /* Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				EA5D20812023F8A100A7541A /* Json */,
+			);
+			path = Doubles;
+			sourceTree = "<group>";
+		};
+		EA5D20812023F8A100A7541A /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				EA5D20822023F8C900A7541A /* ListGamesSuccess.json */,
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
 		EA6710D2201BE9C000A1DA12 = {
 			isa = PBXGroup;
 			children = (
@@ -267,7 +283,7 @@
 		EA6710F5201BE9C000A1DA12 /* top-gamesTests */ = {
 			isa = PBXGroup;
 			children = (
-				EA6710F6201BE9C000A1DA12 /* top_gamesTests.swift */,
+				EA5D20802023F89200A7541A /* Doubles */,
 				EA6710F8201BE9C000A1DA12 /* Info.plist */,
 			);
 			path = "top-gamesTests";
@@ -552,6 +568,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA5D20832023F8C900A7541A /* ListGamesSuccess.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -625,7 +642,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA6710F7201BE9C000A1DA12 /* top_gamesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
