@@ -16,4 +16,13 @@ struct ListGamesUseCase {
             }
         }
     }
+    
+    func favorites() {
+        gamesGateway.allFavoriteGames().onResult { result in
+            switch result {
+            case .success(let games): self.listGamesPresenter.list(games: games)
+            case .fail(let error): self.listGamesPresenter.show(error: error)
+            }
+        }
+    }
 }

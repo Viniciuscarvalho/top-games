@@ -2,6 +2,8 @@ import Foundation
 
 struct GamesRestAPIGateway: GamesGateway {
     
+    func allFavoriteGames() -> Resource<[Game]> { return allGames() }
+    
     func allGames() -> Resource<[Game]> {
         var request = URLRequest(url: URL.Twitch.topGame)
         request.httpMethod = String.HttpMethod.get

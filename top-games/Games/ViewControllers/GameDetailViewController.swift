@@ -36,18 +36,18 @@ class GameDetailViewController: UIViewController {
     @objc func toggleFavorite(_ sender: UIBarButtonItem) {
         let core = SaveGamesCoreDataGateway(managedObjectContext: ManagedObjectContextFactory.make())
         
-        var games = [Game]()
         game.favorite = !game.favorite
-        games.append(game)
         
-        core.save(games: games).onResult { result in
+        core.update(game: game).onResult { result in
             switch result {
             case .success(_):
-                var image = UIImage(named: "star")
                 if self.game.favorite {
-                    image = UIImage(named: "star_filled")
+                    sender.image = UIImage(named: "star_filled")
+                    NotificationCenter.default.post(Notification.Game.didFavoriteGame)
+                } else {
+                    sender.image = UIImage(named: "star")
+                    NotificationCenter.default.post(Notification.Game.didUnfavoriteGame)
                 }
-                sender.image = image
                 break
             case .fail(let error):
                 print(error ?? "👻")

@@ -25,6 +25,28 @@ struct SaveGamesCoreDataGateway: SaveGamesGateway {
         }
     }
     
+    func update(game: Game) -> Resource<Void> {
+        return Resource { completion in
+            let entityName = String(describing: GameEntityCoreData.self)
+            
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
+            
+            let predicate = NSPredicate(format: "name CONTAINS[c] %@", game.name)
+            fetchRequest.predicate = predicate
+            
+            do {
+                let result = try managedObjectContext.fetch(fetchRequest) as! [NSManagedObject]
+                if result.count > 0 {
+                    let gameCoreData = result.first as? GameEntityCoreData
+                    gameCoreData?.favorite = game.favorite
+                }
+            } catch {
+                print(error)
+            }
+            completion(self.generateResult())
+        }
+    }
+    
     private func generateResult() -> Result<Void> {
         do {
             try managedObjectContext.save()
