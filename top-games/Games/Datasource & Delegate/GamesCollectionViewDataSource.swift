@@ -6,8 +6,6 @@ class GamesCollectionViewDataSource: NSObject, UISearchBarDelegate {
     private var gamesCovers: [Int: UIImage?] = [:]
     private let loadImageUsecase: LoadImageUseCase
     private var didSelectGame: ((Game, UIImage?) -> Void)
-    let searchController = UISearchController(searchResultsController: nil)
-    var filteredGames = [Game]()
     
     init(loadImageUsecase: LoadImageUseCase, didSelectGame: @escaping ((Game, UIImage?) -> Void)) {
         self.loadImageUsecase = loadImageUsecase
@@ -38,49 +36,30 @@ class GamesCollectionViewDataSource: NSObject, UISearchBarDelegate {
     private func hasCover(forId id: Int) -> Bool {
         return gamesCovers.keys.contains(id)
     }
-    
-    func searchBarIsEmpty() -> Bool {
-        return searchController.searchBar.text?.isEmpty ?? true
-    }
-    
-    func isFiltering() -> Bool {
-        return searchController.isActive && !searchBarIsEmpty()
-    }
-    
-    func filterContentForSearchText(_ searchText: String, scope: String = "All") {
-        filteredGames = games.filter({( games: Game) -> Bool in
-            return games.name.lowercased().contains(searchText.lowercased())
-        })
-        
-    }
 }
 
 extension GamesCollectionViewDataSource: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if isFiltering() {
-            return filteredGames.count
-        }
         return games.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String.Identifier.gamesCollection, for: indexPath)
+        
         if let gameCell = cell as? GameCollectionViewCell {
-            if isFiltering() {
-                games = [filteredGames[indexPath.row]]
+            let game = self.game(atRow: indexPath.row)
+            if hasCover(forId: game.id) {
+                gameCell.setup(cover: gameCover(byId: game.id))
             } else {
-                let game = self.game(atRow: indexPath.row)
-                if hasCover(forId: game.id) {
-                    gameCell.setup(cover: gameCover(byId: game.id))
-                } else {
-                    loadImageUsecase.load(id: game.id, url: game.coverUrl)
-                }
-                gameCell.setup(game: game, row: indexPath.row+1)
+                loadImageUsecase.load(id: game.id, url: game.coverUrl)
             }
+            gameCell.setup(game: game, row: indexPath.row+1)
         }
+        
         return cell
     }
+    
 }
 
 extension GamesCollectionViewDataSource: UICollectionViewDelegateFlowLayout {
@@ -97,10 +76,3 @@ extension GamesCollectionViewDataSource: UICollectionViewDelegateFlowLayout {
     }
 }
 
-extension GamesCollectionViewDataSource: UISearchResultsUpdating {
-    func updateSearchResults(for searchController: UISearchController) {
-        let searchBar = searchController.searchBar
-        let scope = searchBar.scopeButtonTitles![searchBar.selectedScopeButtonIndex]
-        filterContentForSearchText(searchController.searchBar.text!, scope: scope)
-    }
-}

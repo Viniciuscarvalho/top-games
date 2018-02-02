@@ -13,8 +13,6 @@ class ListGamesViewController: UIViewController, UISearchBarDelegate {
         }
     }
     
-    let searchController = UISearchController(searchResultsController: nil)
-    
     private lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(saveGames), for: .valueChanged)
@@ -24,17 +22,10 @@ class ListGamesViewController: UIViewController, UISearchBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         saveGames()
-        setupSearch()
         
         NotificationCenter.default.addObserver(self, selector: #selector(listGames), name: NSNotification.Name.Game.didSaveGames, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(listGames), name: NSNotification.Name.Game.didFavoriteGame, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(listGames), name: NSNotification.Name.Game.didUnfavoriteGame, object: nil)
-    }
-    
-    func setupSearch() {
-        searchController.obscuresBackgroundDuringPresentation = false
-        navigationItem.searchController = searchController
-        definesPresentationContext = true
     }
     
     @objc private func saveGames() {
@@ -53,4 +44,5 @@ class ListGamesViewController: UIViewController, UISearchBarDelegate {
             navigationController?.pushViewController(gameDetailViewController, animated: true)
     }
 }
+
 
