@@ -4,6 +4,7 @@ protocol Game {
     var name: String { get }
     var popularity: Int { get }
     var viewers: Int { get }
+    var favorite: Bool { set get }
 }
 
 struct GamesEntity: Game {
@@ -12,4 +13,6 @@ struct GamesEntity: Game {
     let name: String
     let popularity: Int
     let viewers: Int
+    var favorite: Bool
 }
+

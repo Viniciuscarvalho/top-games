@@ -1,6 +1,6 @@
 import UIKit
 
-class ListGamesViewController: UIViewController {
+class ListGamesViewController: UIViewController, UISearchBarDelegate {
 
     @IBOutlet private var listGamesView: ListGamesView! {
         didSet {
@@ -13,6 +13,8 @@ class ListGamesViewController: UIViewController {
         }
     }
     
+    let searchController = UISearchController(searchResultsController: nil)
+    
     private lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(saveGames), for: .valueChanged)
@@ -22,6 +24,13 @@ class ListGamesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         saveGames()
+        setupSearch()
+    }
+    
+    func setupSearch() {
+        searchController.obscuresBackgroundDuringPresentation = false
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
     }
     
     @objc private func saveGames() {
@@ -39,6 +48,5 @@ class ListGamesViewController: UIViewController {
             gameDetailViewController.setup(game: game, cover: cover)
             navigationController?.pushViewController(gameDetailViewController, animated: true)
     }
-    
-
 }
+

@@ -12,4 +12,5 @@ extension GameEntityCoreData {
     @NSManaged public var name: String?
     @NSManaged public var popularity: Int32
     @NSManaged public var viewers: Int32
+    @NSManaged public var favorite: Bool
 }

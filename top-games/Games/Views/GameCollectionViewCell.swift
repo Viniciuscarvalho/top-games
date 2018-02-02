@@ -26,8 +26,13 @@ class GameCollectionViewCell: UICollectionViewCell {
         coverImageView.transform = coverImageView.transform.rotated(by: -CGFloat(Double.pi / 6))
     }
     
-    func setup(name: String) {
-        nameLabel.text = name.uppercased()
+    func setup(game: Game, row: Int) {
+        nameLabel.text = "#\(row) \(game.name.uppercased())"
+        var image = UIImage(named: "star")
+        if game.favorite {
+            image = UIImage(named: "star_filled")
+        }
+        favoriteImageView.image = image
     }
     
     func setup(cover: UIImage?) {

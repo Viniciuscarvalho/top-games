@@ -19,6 +19,7 @@ struct SaveGamesCoreDataGateway: SaveGamesGateway {
                 gameCoreData?.name = game.name
                 gameCoreData?.popularity = Int32(game.popularity)
                 gameCoreData?.viewers = Int32(game.viewers)
+                gameCoreData?.favorite = game.favorite
             }
             completion(self.generateResult())
         }

@@ -40,9 +40,10 @@ struct GamesRestAPIGateway: GamesGateway {
                                coverUrl: topGame.game.box.large,
                                name: topGame.game.name,
                                popularity: topGame.game.popularity,
-                               viewers: topGame.viewers)
+                               viewers: topGame.viewers,
+                               favorite: false)
         }
         return games
     }
-    
 }
+

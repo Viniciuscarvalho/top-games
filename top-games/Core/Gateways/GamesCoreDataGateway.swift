@@ -26,6 +26,7 @@ struct GamesCoreDataGateway: GamesGateway {
                           coverUrl: game.coverUrl ?? String.empty,
                           name: game.name ?? String.empty,
                           popularity: game.popularity.int,
-                          viewers: game.viewers.int)
+                          viewers: game.viewers.int,
+                          favorite: game.favorite)
     }
 }
