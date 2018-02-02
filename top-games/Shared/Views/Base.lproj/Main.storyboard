@@ -93,23 +93,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="F1w-px-XB8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="1sK-Dx-4fi"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r4y-T6-KIC" customClass="ListGamesView" customModule="top_games" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="56" width="375" height="498"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="r4y-T6-KIC" firstAttribute="bottom" secondItem="H20-TO-dA0" secondAttribute="bottom" id="3bi-v2-wjW"/>
+                            <constraint firstItem="r4y-T6-KIC" firstAttribute="top" secondItem="F1w-px-XB8" secondAttribute="bottom" id="4X8-V4-4gQ"/>
+                            <constraint firstItem="F1w-px-XB8" firstAttribute="leading" secondItem="H20-TO-dA0" secondAttribute="leading" id="5Y6-fx-Ft7"/>
                             <constraint firstItem="r4y-T6-KIC" firstAttribute="leading" secondItem="H20-TO-dA0" secondAttribute="leading" id="TFk-5h-wDK"/>
+                            <constraint firstItem="F1w-px-XB8" firstAttribute="trailing" secondItem="H20-TO-dA0" secondAttribute="trailing" id="jGO-Ym-BPM"/>
+                            <constraint firstItem="F1w-px-XB8" firstAttribute="top" secondItem="H20-TO-dA0" secondAttribute="top" id="jQ6-uc-pKC"/>
                             <constraint firstItem="r4y-T6-KIC" firstAttribute="trailing" secondItem="H20-TO-dA0" secondAttribute="trailing" id="lgK-ZU-rhb"/>
-                            <constraint firstItem="r4y-T6-KIC" firstAttribute="top" secondItem="H20-TO-dA0" secondAttribute="top" id="nL8-WO-TbO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="H20-TO-dA0"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Top Games" image="Twitchgames" selectedImage="Twitchgames" id="Ivq-Pc-hHp"/>
                     <connections>
                         <outlet property="listGamesView" destination="r4y-T6-KIC" id="NfO-IN-zKL"/>
+                        <outlet property="searchBar" destination="F1w-px-XB8" id="QRV-6g-bgA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cfx-1K-kDc" userLabel="First Responder" sceneMemberID="firstResponder"/>

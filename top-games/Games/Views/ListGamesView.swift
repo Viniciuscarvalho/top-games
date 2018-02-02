@@ -40,8 +40,10 @@ extension ListGamesView: ListGamesPresenter {
     
     func list(games: [Game]) {
         camesCollectionViewDataSource.update(with: games)
-        collectionView.reloadData()
-        loadingView.stopLoading()
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+            self.loadingView.stopLoading()
+        }
     }
 
 }
