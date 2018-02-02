@@ -20,33 +20,12 @@
                         <color key="barTintColor" red="0.29013949632644653" green="0.20798039436340332" blue="0.47848069667816162" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="PnG-zi-nYD" kind="relationship" relationship="rootViewController" id="yUc-nT-y7z"/>
+                        <segue destination="maS-1p-c4O" kind="relationship" relationship="rootViewController" id="6OB-zQ-6N3"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZIr-CU-9zQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-874" y="161"/>
-        </scene>
-        <!--Top Games-->
-        <scene sceneID="T31-OP-TNL">
-            <objects>
-                <viewController id="PnG-zi-nYD" customClass="ListGamesViewController" customModule="top_games" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ST8-ii-Ppp" customClass="ListGamesView" customModule="top_games" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="SwI-TB-9pG"/>
-                    </view>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Top Games" id="2rr-vV-zMC"/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="listGamesView" destination="ST8-ii-Ppp" id="QcV-b3-keo"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7NK-Kd-DTi" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-177" y="161"/>
         </scene>
         <!--Game Detail View Controller-->
         <scene sceneID="YUN-h4-Og0">
@@ -76,7 +55,78 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JSh-PX-1wO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="493.60000000000002" y="160.56971514242881"/>
+            <point key="canvasLocation" x="2022" y="161"/>
+        </scene>
+        <!--Favoritos-->
+        <scene sceneID="ciC-rj-QyG">
+            <objects>
+                <viewController id="nlC-GA-o06" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="woG-lZ-wQQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Xqj-xn-DUe"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Favoritos" image="star" selectedImage="star_filled" id="F5d-xu-7XR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ehq-HN-3an" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1156" y="626"/>
+        </scene>
+        <!--Top Games-->
+        <scene sceneID="DaH-4A-FsX">
+            <objects>
+                <viewController id="Rjz-6y-1Ou" customClass="ListGamesViewController" customModule="top_games" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Y3G-A7-Fy2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r4y-T6-KIC" customClass="ListGamesView" customModule="top_games" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="r4y-T6-KIC" firstAttribute="bottom" secondItem="H20-TO-dA0" secondAttribute="bottom" id="3bi-v2-wjW"/>
+                            <constraint firstItem="r4y-T6-KIC" firstAttribute="leading" secondItem="H20-TO-dA0" secondAttribute="leading" id="TFk-5h-wDK"/>
+                            <constraint firstItem="r4y-T6-KIC" firstAttribute="trailing" secondItem="H20-TO-dA0" secondAttribute="trailing" id="lgK-ZU-rhb"/>
+                            <constraint firstItem="r4y-T6-KIC" firstAttribute="top" secondItem="H20-TO-dA0" secondAttribute="top" id="nL8-WO-TbO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="H20-TO-dA0"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Top Games" image="Twitchgames" selectedImage="Twitchgames" id="Ivq-Pc-hHp"/>
+                    <connections>
+                        <outlet property="listGamesView" destination="r4y-T6-KIC" id="NfO-IN-zKL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cfx-1K-kDc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1156" y="-119"/>
+        </scene>
+        <!--Top Games-->
+        <scene sceneID="lMN-2Z-1mt">
+            <objects>
+                <tabBarController id="maS-1p-c4O" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Top Games" id="y29-zu-jzk"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gkN-O4-boJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Rjz-6y-1Ou" kind="relationship" relationship="viewControllers" id="net-H4-3hF"/>
+                        <segue destination="nlC-GA-o06" kind="relationship" relationship="viewControllers" id="4hM-ar-o9e"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gUa-Sp-UWz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-6" y="161"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Twitchgames" width="25" height="25"/>
+        <image name="star" width="25" height="25"/>
+        <image name="star_filled" width="25" height="25"/>
+    </resources>
 </document>

@@ -39,6 +39,7 @@
 		EA5D207D2022A74700A7541A /* GamesCoreDataGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5D207C2022A74700A7541A /* GamesCoreDataGateway.swift */; };
 		EA5D207F2023EFFA00A7541A /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5D207E2023EFFA00A7541A /* MainNavigationController.swift */; };
 		EA5D20832023F8C900A7541A /* ListGamesSuccess.json in Resources */ = {isa = PBXBuildFile; fileRef = EA5D20822023F8C900A7541A /* ListGamesSuccess.json */; };
+		EA5D20852023FD4200A7541A /* FavotiteGamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5D20842023FD4200A7541A /* FavotiteGamesViewController.swift */; };
 		EA6710DF201BE9C000A1DA12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6710DE201BE9C000A1DA12 /* AppDelegate.swift */; };
 		EA6710E4201BE9C000A1DA12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA6710E2201BE9C000A1DA12 /* Main.storyboard */; };
 		EA6710E7201BE9C000A1DA12 /* top_games.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA6710E5201BE9C000A1DA12 /* top_games.xcdatamodeld */; };
@@ -71,6 +72,9 @@
 		EA671150201E6D8A00A1DA12 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA67114F201E6D8A00A1DA12 /* CoreDataStack.swift */; };
 		EA671152201E6DCE00A1DA12 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA671151201E6DCE00A1DA12 /* LoadingView.swift */; };
 		EA671154201E6DE300A1DA12 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA671153201E6DE300A1DA12 /* LoadingView.xib */; };
+		EAFF9F7F2024039C0074A294 /* TopGamesDecodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFF9F7E2024039C0074A294 /* TopGamesDecodableTests.swift */; };
+		EAFF9F83202405500074A294 /* XCTestCase+LoadJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFF9F82202405500074A294 /* XCTestCase+LoadJson.swift */; };
+		EAFF9F85202406E90074A294 /* JSONDecoder+Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFF9F84202406E90074A294 /* JSONDecoder+Decoder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +120,7 @@
 		EA5D207C2022A74700A7541A /* GamesCoreDataGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesCoreDataGateway.swift; sourceTree = "<group>"; };
 		EA5D207E2023EFFA00A7541A /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		EA5D20822023F8C900A7541A /* ListGamesSuccess.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ListGamesSuccess.json; sourceTree = "<group>"; };
+		EA5D20842023FD4200A7541A /* FavotiteGamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavotiteGamesViewController.swift; sourceTree = "<group>"; };
 		EA6710DB201BE9C000A1DA12 /* top-games.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "top-games.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA6710DE201BE9C000A1DA12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA6710E3201BE9C000A1DA12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -152,6 +157,10 @@
 		EA67114F201E6D8A00A1DA12 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		EA671151201E6DCE00A1DA12 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		EA671153201E6DE300A1DA12 /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
+		EAFF9F7D2024039B0074A294 /* top-gamesTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "top-gamesTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		EAFF9F7E2024039C0074A294 /* TopGamesDecodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopGamesDecodableTests.swift; sourceTree = "<group>"; };
+		EAFF9F82202405500074A294 /* XCTestCase+LoadJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+LoadJson.swift"; sourceTree = "<group>"; };
+		EAFF9F84202406E90074A294 /* JSONDecoder+Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Decoder.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -283,8 +292,11 @@
 		EA6710F5201BE9C000A1DA12 /* top-gamesTests */ = {
 			isa = PBXGroup;
 			children = (
+				EAFF9F7B202403090074A294 /* Entities */,
 				EA5D20802023F89200A7541A /* Doubles */,
 				EA6710F8201BE9C000A1DA12 /* Info.plist */,
+				EAFF9F82202405500074A294 /* XCTestCase+LoadJson.swift */,
+				EAFF9F84202406E90074A294 /* JSONDecoder+Decoder.swift */,
 			);
 			path = "top-gamesTests";
 			sourceTree = "<group>";
@@ -331,6 +343,7 @@
 				EA67112B201E124F00A1DA12 /* GameDetailViewController.swift */,
 				EA67112D201E126F00A1DA12 /* ListGamesViewController.swift */,
 				EA5D207E2023EFFA00A7541A /* MainNavigationController.swift */,
+				EA5D20842023FD4200A7541A /* FavotiteGamesViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -471,6 +484,23 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		EAFF9F7B202403090074A294 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				EAFF9F7C2024031C0074A294 /* Decodables */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		EAFF9F7C2024031C0074A294 /* Decodables */ = {
+			isa = PBXGroup;
+			children = (
+				EAFF9F7E2024039C0074A294 /* TopGamesDecodableTests.swift */,
+				EAFF9F7D2024039B0074A294 /* top-gamesTests-Bridging-Header.h */,
+			);
+			name = Decodables;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -525,6 +555,7 @@
 					};
 					EA6710F1201BE9C000A1DA12 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 						TestTargetID = EA6710DA201BE9C000A1DA12;
 					};
@@ -620,6 +651,7 @@
 				EA671143201E64F300A1DA12 /* UIStoryboard+Main.swift in Sources */,
 				2FD1F51220223E1C0067865B /* SaveGamesUseCase.swift in Sources */,
 				2FD1F51020223D2D0067865B /* SaveGamesGateway.swift in Sources */,
+				EA5D20852023FD4200A7541A /* FavotiteGamesViewController.swift in Sources */,
 				2FD1F519202246190067865B /* CleanGamesCoreDataGatewayFactory.swift in Sources */,
 				EA5D20672022871800A7541A /* GamesCoreDataGatewayFactory.swift in Sources */,
 				EA671141201E64A100A1DA12 /* Int32+ToInt.swift in Sources */,
@@ -642,6 +674,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAFF9F83202405500074A294 /* XCTestCase+LoadJson.swift in Sources */,
+				EAFF9F7F2024039C0074A294 /* TopGamesDecodableTests.swift in Sources */,
+				EAFF9F85202406E90074A294 /* JSONDecoder+Decoder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -817,12 +852,15 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6U8286L9PF;
 				INFOPLIST_FILE = "top-gamesTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.viniciuscarvalho.top-gamesTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "top-gamesTests/top-gamesTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/top-games.app/top-games";
@@ -834,12 +872,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6U8286L9PF;
 				INFOPLIST_FILE = "top-gamesTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.viniciuscarvalho.top-gamesTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "top-gamesTests/top-gamesTests-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/top-games.app/top-games";

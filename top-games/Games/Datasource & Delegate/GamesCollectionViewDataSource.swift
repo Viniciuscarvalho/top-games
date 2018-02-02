@@ -51,6 +51,7 @@ class GamesCollectionViewDataSource: NSObject, UISearchBarDelegate {
         filteredGames = games.filter({( games: Game) -> Bool in
             return games.name.lowercased().contains(searchText.lowercased())
         })
+        
     }
 }
 
