@@ -60,18 +60,30 @@
         <!--Favoritos-->
         <scene sceneID="ciC-rj-QyG">
             <objects>
-                <viewController id="nlC-GA-o06" sceneMemberID="viewController">
+                <viewController id="nlC-GA-o06" customClass="FavotiteGamesViewController" customModule="top_games" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="woG-lZ-wQQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5cd-At-w8h" customClass="ListGamesView" customModule="top_games" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5cd-At-w8h" firstAttribute="leading" secondItem="Xqj-xn-DUe" secondAttribute="leading" id="3QA-p1-1Iu"/>
+                            <constraint firstItem="5cd-At-w8h" firstAttribute="bottom" secondItem="Xqj-xn-DUe" secondAttribute="bottom" id="CbI-Gt-nZT"/>
+                            <constraint firstItem="5cd-At-w8h" firstAttribute="trailing" secondItem="Xqj-xn-DUe" secondAttribute="trailing" id="Zc3-d1-X1g"/>
+                            <constraint firstItem="5cd-At-w8h" firstAttribute="top" secondItem="Xqj-xn-DUe" secondAttribute="top" id="wuT-PJ-sjA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Xqj-xn-DUe"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Favoritos" image="star" selectedImage="star_filled" id="F5d-xu-7XR"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ehq-HN-3an" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1156" y="626"/>
+            <point key="canvasLocation" x="1156" y="625.63718140929541"/>
         </scene>
         <!--Top Games-->
         <scene sceneID="DaH-4A-FsX">
