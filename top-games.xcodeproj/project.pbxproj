@@ -183,6 +183,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F91133F2028C1AD000A9679 /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				EA5D20802023F89200A7541A /* Doubles */,
+				EAFF9F7B202403090074A294 /* Entities */,
+			);
+			path = Games;
+			sourceTree = "<group>";
+		};
 		2FD1F5152022454A0067865B /* Gateways */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,8 +304,7 @@
 		EA6710F5201BE9C000A1DA12 /* top-gamesTests */ = {
 			isa = PBXGroup;
 			children = (
-				EAFF9F7B202403090074A294 /* Entities */,
-				EA5D20802023F89200A7541A /* Doubles */,
+				2F91133F2028C1AD000A9679 /* Games */,
 				EA6710F8201BE9C000A1DA12 /* Info.plist */,
 				EAFF9F82202405500074A294 /* XCTestCase+LoadJson.swift */,
 				EAFF9F84202406E90074A294 /* JSONDecoder+Decoder.swift */,
@@ -493,6 +501,7 @@
 				EAFF9F7C2024031C0074A294 /* Decodables */,
 			);
 			name = Entities;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		EAFF9F7C2024031C0074A294 /* Decodables */ = {
