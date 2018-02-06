@@ -80,6 +80,9 @@
                         <viewLayoutGuide key="safeArea" id="Xqj-xn-DUe"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Favoritos" image="star" selectedImage="star_filled" id="F5d-xu-7XR"/>
+                    <connections>
+                        <outlet property="listGamesView" destination="5cd-At-w8h" id="TA4-Df-JB2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ehq-HN-3an" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

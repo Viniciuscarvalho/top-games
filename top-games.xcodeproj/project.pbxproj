@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F9113422029CFCB000A9679 /* ListGamesUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9113412029CFCB000A9679 /* ListGamesUseCaseTests.swift */; };
+		2F911345202A1BAD000A9679 /* ListGamesPresenterStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F911344202A1BAD000A9679 /* ListGamesPresenterStub.swift */; };
+		2F911349202A1C8A000A9679 /* GamesGatewayStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F911348202A1C8A000A9679 /* GamesGatewayStub.swift */; };
 		2FD1F50A2022371D0067865B /* LoadImageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD1F5092022371D0067865B /* LoadImageUseCase.swift */; };
 		2FD1F50C2022379E0067865B /* ImageCacheGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD1F50B2022379E0067865B /* ImageCacheGateway.swift */; };
 		2FD1F50E20223D160067865B /* CleanGamesGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD1F50D20223D160067865B /* CleanGamesGateway.swift */; };
@@ -89,6 +92,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F9113412029CFCB000A9679 /* ListGamesUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListGamesUseCaseTests.swift; sourceTree = "<group>"; };
+		2F911344202A1BAD000A9679 /* ListGamesPresenterStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListGamesPresenterStub.swift; sourceTree = "<group>"; };
+		2F911348202A1C8A000A9679 /* GamesGatewayStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesGatewayStub.swift; sourceTree = "<group>"; };
 		2FD1F5092022371D0067865B /* LoadImageUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImageUseCase.swift; sourceTree = "<group>"; };
 		2FD1F50B2022379E0067865B /* ImageCacheGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheGateway.swift; sourceTree = "<group>"; };
 		2FD1F50D20223D160067865B /* CleanGamesGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanGamesGateway.swift; sourceTree = "<group>"; };
@@ -186,10 +192,46 @@
 		2F91133F2028C1AD000A9679 /* Games */ = {
 			isa = PBXGroup;
 			children = (
+				2F911346202A1C5C000A9679 /* Doubles */,
+				2F9113402029CF9E000A9679 /* Usecases */,
 				EA5D20802023F89200A7541A /* Doubles */,
 				EAFF9F7B202403090074A294 /* Entities */,
 			);
 			path = Games;
+			sourceTree = "<group>";
+		};
+		2F9113402029CF9E000A9679 /* Usecases */ = {
+			isa = PBXGroup;
+			children = (
+				2F9113412029CFCB000A9679 /* ListGamesUseCaseTests.swift */,
+			);
+			path = Usecases;
+			sourceTree = "<group>";
+		};
+		2F911343202A1B50000A9679 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				2F911344202A1BAD000A9679 /* ListGamesPresenterStub.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		2F911346202A1C5C000A9679 /* Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				2F911347202A1C77000A9679 /* Gateways */,
+				2F911343202A1B50000A9679 /* Presenters */,
+			);
+			name = Doubles;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		2F911347202A1C77000A9679 /* Gateways */ = {
+			isa = PBXGroup;
+			children = (
+				2F911348202A1C8A000A9679 /* GamesGatewayStub.swift */,
+			);
+			path = Gateways;
 			sourceTree = "<group>";
 		};
 		2FD1F5152022454A0067865B /* Gateways */ = {
@@ -687,9 +729,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F911345202A1BAD000A9679 /* ListGamesPresenterStub.swift in Sources */,
+				2F911349202A1C8A000A9679 /* GamesGatewayStub.swift in Sources */,
 				EAFF9F83202405500074A294 /* XCTestCase+LoadJson.swift in Sources */,
 				EAFF9F7F2024039C0074A294 /* TopGamesDecodableTests.swift in Sources */,
 				EAFF9F85202406E90074A294 /* JSONDecoder+Decoder.swift in Sources */,
+				2F9113422029CFCB000A9679 /* ListGamesUseCaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
