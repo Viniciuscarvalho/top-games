@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListGamesView" customModule="top_games" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="RBS-Pe-PnE" id="6jY-S5-aVe"/>
+                <outlet property="emptyView" destination="FRp-Ek-4gj" id="NzU-Mo-Aa5"/>
                 <outlet property="loadingView" destination="Cz1-K7-a4T" id="kAA-6L-PyL"/>
             </connections>
         </placeholder>
@@ -35,13 +36,21 @@
                     <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FRp-Ek-4gj" customClass="EmptyView" customModule="top_games" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="RBS-Pe-PnE" firstAttribute="top" secondItem="awo-Su-UrK" secondAttribute="top" id="Deb-Dd-fB5"/>
                 <constraint firstItem="Cz1-K7-a4T" firstAttribute="trailing" secondItem="awo-Su-UrK" secondAttribute="trailing" id="H76-8e-kbg"/>
+                <constraint firstItem="FRp-Ek-4gj" firstAttribute="trailing" secondItem="awo-Su-UrK" secondAttribute="trailing" id="KwD-ui-JWc"/>
                 <constraint firstItem="RBS-Pe-PnE" firstAttribute="leading" secondItem="awo-Su-UrK" secondAttribute="leading" id="LN8-Fr-QqF"/>
                 <constraint firstItem="Cz1-K7-a4T" firstAttribute="top" secondItem="awo-Su-UrK" secondAttribute="top" id="MJK-Em-FH0"/>
+                <constraint firstItem="FRp-Ek-4gj" firstAttribute="top" secondItem="awo-Su-UrK" secondAttribute="top" id="R80-sa-tH3"/>
+                <constraint firstItem="FRp-Ek-4gj" firstAttribute="leading" secondItem="awo-Su-UrK" secondAttribute="leading" id="UU0-Ky-s0T"/>
+                <constraint firstItem="FRp-Ek-4gj" firstAttribute="bottom" secondItem="awo-Su-UrK" secondAttribute="bottom" id="WfZ-7M-xwO"/>
                 <constraint firstItem="RBS-Pe-PnE" firstAttribute="bottom" secondItem="awo-Su-UrK" secondAttribute="bottom" id="cJE-k4-yTU"/>
                 <constraint firstItem="Cz1-K7-a4T" firstAttribute="bottom" secondItem="awo-Su-UrK" secondAttribute="bottom" id="i2m-Cg-5eW"/>
                 <constraint firstItem="RBS-Pe-PnE" firstAttribute="trailing" secondItem="awo-Su-UrK" secondAttribute="trailing" id="lsM-2U-DMy"/>

@@ -11,7 +11,7 @@ extension NibLoadableProtocol {
     public func loadNib() -> UIView {
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: self.nibName(), bundle: bundle)
-        return nib.instantiate(withOwner: self, options: nil)[0] as! UIView // swiftlint:disable:this force_cast
+        return nib.instantiate(withOwner: self, options: nil)[0] as! UIView 
     }
     
     fileprivate func setupNib() {

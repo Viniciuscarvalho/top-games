@@ -13,6 +13,7 @@ struct SearchGamesUseCase {
             switch result {
             case .success(let games):
                 var newGames: [Game]!
+                
                 if term.isEmpty {
                     newGames = games
                 } else {

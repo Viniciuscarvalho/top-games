@@ -2,6 +2,7 @@ import UIKit
 
 class ListGamesView: NibLoadableView {
     
+    @IBOutlet private weak var emptyView: EmptyView!
     @IBOutlet private weak var loadingView: LoadingView!
     @IBOutlet private weak var collectionView: UICollectionView! {
         didSet {
