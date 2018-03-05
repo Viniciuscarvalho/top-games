@@ -29,7 +29,7 @@ struct GamesRestAPIGateway: GamesGateway {
             let games = generateGameEntity(topGames: topGames)
             return Result.success(games)
         } else if data == nil {
-            return Result.fail((TopGamesError.noResponse as! Error))
+            return Result.fail(TopGamesError.noResponse)
         }
         
         return Result.fail(error)
