@@ -2,6 +2,8 @@ import Foundation
 
 struct GamesRestAPIGateway: GamesGateway {
     
+    private var page: Int = 1
+    
     func allFavoriteGames() -> Resource<[Game]> { return allGames() }
     
     func allGames() -> Resource<[Game]> {
@@ -24,10 +26,13 @@ struct GamesRestAPIGateway: GamesGateway {
             var topGames: TopGamesDecodable
             do {
                 topGames = try JSONDecoder().decode(TopGamesDecodable.self, from: data)
-            } catch let error { return Result.fail(error) }
-            
+            } catch let error {
+                return Result.fail(error)
+            }
+    
             let games = generateGameEntity(topGames: topGames)
             return Result.success(games)
+            
         } else if data == nil {
             return Result.fail(TopGamesError.noResponse)
         }

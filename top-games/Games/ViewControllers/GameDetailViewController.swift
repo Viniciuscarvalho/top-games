@@ -36,7 +36,7 @@ class GameDetailViewController: UIViewController {
     @objc func toggleFavorite(_ sender: UIBarButtonItem) {
         let core = SaveGamesCoreDataGateway(managedObjectContext: ManagedObjectContextFactory.make())
         
-        game.favorite = !game.favorite
+        //game.favorite = !game.favorite
         
         core.update(game: game).onResult { result in
             switch result {
