@@ -5,7 +5,7 @@ extension String {
     
     struct Twitch {
         struct Header {
-            static let clientId = "99bnprkklh1ga3zs8mmcsa0vun1pdh"
+            static let clientId = "xzqsdxt247xi72kder6l57r0aksbsh"
             static let accept = "application/vnd.twitchtv.v5+json"
         }
     }
