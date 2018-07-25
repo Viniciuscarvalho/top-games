@@ -9,7 +9,7 @@ class GameDetailView: NibLoadableView {
     
     func setup(game: Game, image: UIImage?) {
         nameLabel.text = game.name.uppercased()
-        viewersLabel.text = "\(game.viewers)"
+        //viewersLabel.text = "\(game.viewers)"
         coverImageView.image = image
     }
 }

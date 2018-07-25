@@ -2,8 +2,6 @@ import Foundation
 
 struct GamesRestAPIGateway: GamesGateway {
     
-    private var page: Int = 1
-    
     func allFavoriteGames() -> Resource<[Game]> { return allGames() }
     
     func allGames() -> Resource<[Game]> {
@@ -42,12 +40,11 @@ struct GamesRestAPIGateway: GamesGateway {
     }
     
     private func generateGameEntity(topGames: TopGamesDecodable) -> [Game] {
-        let games = topGames.top.map { topGame -> Game in
-            return GamesEntity(id: topGame.game.id,
-                               coverUrl: topGame.game.box.large,
-                               name: topGame.game.name,
-                               popularity: topGame.game.popularity,
-                               viewers: topGame.viewers,
+        let games = topGames.data.map { topGame -> Game in
+            return GamesEntity(id: topGame.data.id,
+                               coverUrl: topGame.data.box,
+                               name: topGame.data.name,
+                               pagination: topGame.pagination,
                                favorite: false)
         }
         return games

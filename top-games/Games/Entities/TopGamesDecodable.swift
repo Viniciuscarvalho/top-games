@@ -1,29 +1,28 @@
 struct TopGamesDecodable: Decodable {
-    let top: [TopGameDecodable]
+    let data: [TopGameDecodable]
 }
 
 extension TopGamesDecodable {
     struct TopGameDecodable: Decodable {
-        let game: GameDecodable
-        let viewers: Int
+        let data: DataDecodable
+        let pagination: String
     }
 }
 
 extension TopGamesDecodable.TopGameDecodable {
-    struct GameDecodable: Decodable {
+    struct DataDecodable: Decodable {
         let name: String
-        let popularity: Int
         let id: Int
-        let box: BoxDecodable
+        let box: String
         
         enum CodingKeys: String, CodingKey {
-            case id = "_id", popularity, name, box
+            case id, name, box = "box_art_url"
         }
     }
 }
 
-extension TopGamesDecodable.TopGameDecodable.GameDecodable {
-    struct BoxDecodable: Decodable {
-        let large: String
+extension TopGamesDecodable.TopGameDecodable {
+    struct PaginationDecodable: Decodable {
+        let cursor: String
     }
 }

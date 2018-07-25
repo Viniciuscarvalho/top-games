@@ -39,8 +39,7 @@ struct GamesCoreDataGateway: GamesGateway {
         return GamesEntity(id: game.id.int,
                           coverUrl: game.coverUrl ?? String.empty,
                           name: game.name ?? String.empty,
-                          popularity: game.popularity.int,
-                          viewers: game.viewers.int,
+                          pagination: String.empty,
                           favorite: game.favorite)
     }
 }
