@@ -12,7 +12,7 @@ struct LoadImageUseCase {
         self.loadImagePresenter = loadImagePresenter
     }
     
-    func load(id: Int, url: String) {
+    func load(id: String, url: String) {
         if imageCacheGateway.existCache(forKey: id) {
             do {
                 let data = try imageCacheGateway.value(forKey: id)

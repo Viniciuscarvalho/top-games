@@ -1,5 +1,5 @@
 protocol Game {
-    var id: Int { get }
+    var id: String { get }
     var coverUrl: String { get }
     var name: String { get }
     var pagination: String { get }
@@ -7,7 +7,7 @@ protocol Game {
 }
 
 struct GamesEntity: Game {
-    let id: Int
+    let id: String
     let coverUrl: String
     let name: String
     let pagination: String

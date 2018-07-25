@@ -3,7 +3,7 @@ import UIKit
 class GamesCollectionViewDataSource: NSObject, UISearchBarDelegate {
     
     private var games: [Game] = []
-    private var gamesCovers: [Int: UIImage?] = [:]
+    private var gamesCovers: [String: UIImage?] = [:]
     private let loadImageUsecase: LoadImageUseCase
     private var didSelectGame: ((Game, UIImage?) -> Void)
     
@@ -16,24 +16,20 @@ class GamesCollectionViewDataSource: NSObject, UISearchBarDelegate {
         self.games = games
     }
     
-    func updateGameCover(id: Int, image: UIImage?) {
+    func updateGameCover(id: String, image: UIImage?) {
         self.gamesCovers[id] = image
     }
-    
-    func row(ofId id: Int) -> Int? {
-        return games.index { $0.id == id }
-    }
-    
+
     private func game(atRow row: Int) -> Game {
         return games[row]
     }
     
-    private func gameCover(byId id: Int) -> UIImage? {
+    private func gameCover(byId id: String) -> UIImage? {
         guard let cover = gamesCovers[id] else { return nil }
         return cover
     }
     
-    private func hasCover(forId id: Int) -> Bool {
+    private func hasCover(forId id: String) -> Bool {
         return gamesCovers.keys.contains(id)
     }
 }

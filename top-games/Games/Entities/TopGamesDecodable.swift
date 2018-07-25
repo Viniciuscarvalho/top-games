@@ -1,18 +1,12 @@
-struct TopGamesDecodable: Decodable {
-    let data: [TopGameDecodable]
+struct TopGameDecodable: Decodable {
+    let data: [DataDecodable]
+    let pagination: String
 }
 
-extension TopGamesDecodable {
-    struct TopGameDecodable: Decodable {
-        let data: DataDecodable
-        let pagination: String
-    }
-}
-
-extension TopGamesDecodable.TopGameDecodable {
+extension TopGameDecodable {
     struct DataDecodable: Decodable {
+        let id: String
         let name: String
-        let id: Int
         let box: String
         
         enum CodingKeys: String, CodingKey {
@@ -21,7 +15,13 @@ extension TopGamesDecodable.TopGameDecodable {
     }
 }
 
-extension TopGamesDecodable.TopGameDecodable {
+extension TopGameDecodable.DataDecodable {
+    func getUrlBox(width: Int, height: Int) -> String {
+        return box.replacingOccurrences(of: "{width}", with: String(width)).replacingOccurrences(of: "{height}", with: String(height))
+    }
+}
+
+extension TopGameDecodable {
     struct PaginationDecodable: Decodable {
         let cursor: String
     }

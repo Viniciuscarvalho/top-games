@@ -14,7 +14,7 @@ struct SaveGamesCoreDataGateway: SaveGamesGateway {
             for game in games {
                 var gameCoreData: GameEntityCoreData?
                 gameCoreData = NSEntityDescription.insertNewObject(forEntityName: entityName, into: self.managedObjectContext) as? GameEntityCoreData
-                gameCoreData?.id = Int32(game.id)
+                gameCoreData?.id = game.id
                 gameCoreData?.coverUrl = game.coverUrl
                 gameCoreData?.name = game.name
                 gameCoreData?.favorite = game.favorite

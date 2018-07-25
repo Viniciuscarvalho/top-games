@@ -21,9 +21,9 @@ struct GamesRestAPIGateway: GamesGateway {
     private func generateResult(data: Data?, error: Error?) -> Result<[Game]> {
         
         if error == nil, let data = data {
-            var topGames: TopGamesDecodable
+            var topGames: TopGameDecodable
             do {
-                topGames = try JSONDecoder().decode(TopGamesDecodable.self, from: data)
+                topGames = try JSONDecoder().decode(TopGameDecodable.self, from: data)
             } catch let error {
                 return Result.fail(error)
             }
@@ -39,12 +39,12 @@ struct GamesRestAPIGateway: GamesGateway {
         
     }
     
-    private func generateGameEntity(topGames: TopGamesDecodable) -> [Game] {
+    private func generateGameEntity(topGames: TopGameDecodable) -> [Game] {
         let games = topGames.data.map { topGame -> Game in
-            return GamesEntity(id: topGame.data.id,
-                               coverUrl: topGame.data.box,
-                               name: topGame.data.name,
-                               pagination: topGame.pagination,
+            return GamesEntity(id: topGame.id,
+                               coverUrl: topGame.getUrlBox(width: 272, height: 380),
+                               name: topGame.name,
+                               pagination: topGames.pagination,
                                favorite: false)
         }
         return games

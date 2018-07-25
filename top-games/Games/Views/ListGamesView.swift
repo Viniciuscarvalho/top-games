@@ -59,7 +59,7 @@ extension ListGamesView: SaveGamesPresenter {
 
 extension ListGamesView: LoadImagePresenter {
     
-    func show(data: Data, forId id: Int) {
+    func show(data: Data, forId id: String) {
         let image = UIImage(data: data)
         camesCollectionViewDataSource.updateGameCover(id: id, image: image)
         if let row = camesCollectionViewDataSource.row(ofId: id) {

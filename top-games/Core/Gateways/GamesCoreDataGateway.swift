@@ -36,7 +36,7 @@ struct GamesCoreDataGateway: GamesGateway {
     }
     
     private func generateEntity(game: GameEntityCoreData) -> Game {
-        return GamesEntity(id: game.id.int,
+        return GamesEntity(id: game.id ?? String.empty,
                           coverUrl: game.coverUrl ?? String.empty,
                           name: game.name ?? String.empty,
                           pagination: String.empty,
