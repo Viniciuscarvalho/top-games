@@ -62,11 +62,11 @@ extension ListGamesView: LoadImagePresenter {
     func show(data: Data, forId id: String) {
         let image = UIImage(data: data)
         camesCollectionViewDataSource.updateGameCover(id: id, image: image)
-        if let row = camesCollectionViewDataSource.row(ofId: id) {
-            let intedPathToUpdate = IndexPath(row: row, section: 0)
-            DispatchQueue.main.async { [unowned self] in
-                self.collectionView.reloadItems(at: [intedPathToUpdate])
-            }
-        }
+//        if let row = camesCollectionViewDataSource.row(ofId: id) {
+//            let intedPathToUpdate = IndexPath(row: row, section: 0)
+//            DispatchQueue.main.async { [unowned self] in
+//                self.collectionView.reloadItems(at: [intedPathToUpdate])
+//            }
+//        }
     }
 }

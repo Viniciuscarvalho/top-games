@@ -1,7 +1,7 @@
 import Foundation
 
 protocol ImageCacheGateway {
-    func existCache(forKey key: Int) -> Bool
-    func cache(key: Int, value: Data)
-    func value(forKey key: Int) throws -> Data
+    func existCache(forKey key: String) -> Bool
+    func cache(key: String, value: Data)
+    func value(forKey key: String) throws -> Data
 }

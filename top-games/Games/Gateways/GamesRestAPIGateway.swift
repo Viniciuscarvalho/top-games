@@ -24,10 +24,11 @@ struct GamesRestAPIGateway: GamesGateway {
             var topGames: TopGameDecodable
             do {
                 topGames = try JSONDecoder().decode(TopGameDecodable.self, from: data)
+                
             } catch let error {
                 return Result.fail(error)
             }
-    
+            
             let games = generateGameEntity(topGames: topGames)
             return Result.success(games)
             
@@ -44,7 +45,7 @@ struct GamesRestAPIGateway: GamesGateway {
             return GamesEntity(id: topGame.id,
                                coverUrl: topGame.getUrlBox(width: 272, height: 380),
                                name: topGame.name,
-                               pagination: topGames.pagination,
+                               pagination: topGames.pagination.cursor,
                                favorite: false)
         }
         return games
